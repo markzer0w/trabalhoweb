@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 20px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>Portifólio Pessoal - Currículo Online</title>
+</head>
+<body>
+    <h1>Portfólio Pessoal - Currículo Online</h1>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#educacao">Formação Educacional</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div id="sobre" style="display: none;">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Meu nome é Marcos, tenho 25 anos e sou natural de Cascavel. Sou músico e artista, apaixonado por criar e compartilhar minha arte com o mundo. Desde jovem, a música tem sido uma parte essencial da minha vida, e ao longo dos anos, desenvolvi minhas habilidades e meu estilo único.
+
+            Minha jornada artística é marcada por diversas experiências e colaborações que enriqueceram meu repertório e minha visão criativa. Acredito no poder transformador da música e da arte, e busco sempre transmitir emoções e histórias através das minhas composições e performances.
+            
+            Seja no palco ou no estúdio, minha dedicação e amor pela música são evidentes em cada nota e melodia. Estou sempre em busca de novas inspirações e oportunidades para crescer como artista e tocar o coração das pessoas com minha arte.</p>
+        <a href="#">Voltar</a>
+    </div>
+
+    <div id="educacao" style="display: none;">
+        <h2>Formação Educacional</h2>
+        <p>Concluí meus estudos no Colégio Estadual Professor Victorio Emanuel Abrozino, onde desenvolvi uma base sólida de conhecimento e habilidades. Após essa etapa, busquei especialização na área de audiovisual, realizando um curso técnico no Colégio Eleodoro em Cascavel. Essa formação técnica me proporcionou uma compreensão aprofundada das técnicas e ferramentas utilizadas na produção audiovisual, ampliando minhas competências e minha paixão pela área.
+
+            Atualmente, estou iniciando uma nova jornada acadêmica como calouro na Faculdade Uninter, cursando Tecnologia em Análise e Desenvolvimento de Sistemas (TADS). Estou entusiasmado com as oportunidades de aprendizado e crescimento que essa nova fase trará, e ansioso para aplicar meus conhecimentos técnicos em novos projetos e desafios.</p>
+        <a href="#">Voltar</a>
+    </div>
+
+    <div id="portfolio" style="display: none;">
+        <h2>Meu Portfólio</h2>
+        <p>Experiência Profissional:
+
+            Durante meu curso técnico, tive a oportunidade de participar de diversos projetos práticos que me permitiram aplicar os conhecimentos adquiridos em sala de aula. Trabalhei em projetos de edição de vídeo, produção de conteúdo audiovisual e desenvolvimento de materiais promocionais, o que me proporcionou uma visão ampla e prática do mercado de audiovisual.
+            
+            Habilidades e Competências
+            
+            Edição de vídeo e áudio
+            Produção e direção de conteúdo audiovisual
+            Desenvolvimento de sistemas e análise de dados
+            Trabalho em equipe e gestão de projetos
+            Criatividade e inovação
+            Objetivos Profissionais
+            
+            Meu objetivo é continuar desenvolvendo minhas habilidades técnicas e criativas, buscando sempre novas oportunidades de aprendizado e crescimento. 
+            Estou ansioso para contribuir com projetos inovadores e desafiadores, aplicando meus conhecimentos em análise e desenvolvimento de sistemas para criar soluções eficazes e impactantes.</p>
+        <a href="#">Voltar</a>
+    </div>
+
+    <div id="contato" style="display: none;">
+        <h2>Contato</h2>
+        <p>Telefone para contato: (45) 99123-2098</p>
+        <p>Email para contato: markzer0@live.com</p>
+        <a href="#">Voltar</a>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('div[id]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.style.display = 'block';
+                }
+            });
+        });
+
+        const voltarLinks = document.querySelectorAll('a[href="#"]');
+        voltarLinks.forEach(voltar => {
+            voltar.addEventListener('click', function(e) {
+                e.preventDefault();
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
